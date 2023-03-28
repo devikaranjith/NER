@@ -12,7 +12,7 @@ def predict_labels(input_text):
     MAX_NUM_WORDS = 10000
     MAX_SEQUENCE_LENGTH = 20
     
-    with open(r'C:\Users\MY-PC\OneDrive\Documents\GitHub\Named_Entity_Recognition\tokenizer.pkl', 'rb') as f:
+    with open(r'tokenizer.pkl', 'rb') as f:
          tokenizer = pickle.load(f)
     #tokenizer = Tokenizer()
     #tokenizer.fit_on_texts(input_text.split())
@@ -32,7 +32,7 @@ def predict_labels(input_text):
              'I-Gene': 28, 'E-Gene': 29}
     
     # Load the trained model
-    model = load_model(r'C:\Users\MY-PC\OneDrive\Documents\GitHub\Named_Entity_Recognition\model.h5')
+    model = load_model(r'model.h5')
 
     # Predict on the new data
     predictions = model.predict(X)
