@@ -96,7 +96,7 @@ entity_colors = {"O": "white",
           "E-Gene": "#87cefa"}
 
 
-if st.button('Predict'):
+if st.button('Analyze'):
     if input_text:
         predicted_labels = predict_labels(input_text)
         # Split input text into words
